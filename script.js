@@ -1,67 +1,79 @@
-// Popup Modal (uncomment if needed)
-window.onload = function () {
-    const modal = document.getElementById("popupModal");
-    modal.style.display = "flex";
-};
+// Show the popup modal when the page loads (only the first time)
+window.onload = () => {
+    const popupOverlay = document.getElementById('popupOverlay');
+    const gotItBtn = document.getElementById('gotItBtn');
+    const closeBtn = document.getElementById('closeBtn');
 
-function closeModal() {
-    const modal = document.getElementById("popupModal");
-    modal.style.display = "none";
-}
-
-function redirectMenu() {
-    window.location.href = "pages/menu.html"; // Redirect to Menu
-}
-
-
-
-// Select the carousel container and slides
-const track = document.querySelector('.carousel'); // Select the carousel container
-const slides = Array.from(track.children); // Get all the slides
-// Select the control buttons
-const prevButton = document.querySelector('.prev'); // Previous button
-const nextButton = document.querySelector('.next'); // Next button
-
-let currentSlide = 0;
-
-// Function to update the carousel position
-const updateCarousel = () => {
-  // Slide the track to the appropriate position based on the currentSlide
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
-};
-
-// Handle clicking the "Previous" button
-prevButton.addEventListener('click', () => {
-  currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
-  updateCarousel();
-});
-
-// Handle clicking the "Next" button
-nextButton.addEventListener('click', () => {
-  currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
-  updateCarousel();
-});
-
-// Optional: Auto-slide every 5 seconds
-setInterval(() => {
-  currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
-  updateCarousel();
-}, 5000);
-
-  
-
-function validateForm() {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-  
-    if (name === "" || email === "" || message === "") {
-      alert("All fields must be filled out.");
-      return false;
+    if (!localStorage.getItem('hasVisited')) {
+        // If not, show the popup
+        popupOverlay.style.display = 'flex'; // Display popup
+        localStorage.setItem('hasVisited', 'true'); // Mark user as visited
     }
-    
-    // If everything is okay
-    alert("Thank you for contacting us!");
-    return true;
-  }
-  
+
+    // Close the popup when the "Got it" button is clicked
+    gotItBtn.addEventListener('click', () => {
+        popupOverlay.style.display = 'none';
+    });
+
+    // Close the popup when the close button is clicked
+    closeBtn.addEventListener('click', () => {
+        popupOverlay.style.display = 'none';
+    });
+}
+
+// Carousel functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevButton = document.querySelector('#prevBtn');
+    const nextButton = document.querySelector('#nextBtn');
+
+    let currentIndex = 0; // Initial slide index
+
+    const moveToSlide = (index) => {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${slideWidth * index}px)`; // Move carousel slides
+    };
+
+    // Next button click event
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+        moveToSlide(currentIndex);
+    });
+
+    // Previous button click event
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+        moveToSlide(currentIndex);
+    });
+
+    // Auto-scroll functionality
+    const autoScroll = () => {
+        setInterval(() => {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            moveToSlide(currentIndex);
+        }, 3000); // Auto-scroll every 3 seconds
+    };
+
+    autoScroll(); // Start auto-scrolling when the page loads
+});
+
+// Newsletter form submission
+document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const emailInput = document.getElementById('emailInput').value; // Get email input value
+
+    if (emailInput) {
+        // Show the notification
+        const notification = document.getElementById('notification');
+        notification.classList.add('show'); // Show notification by adding 'show' class
+
+        // Optionally, hide the notification after 5 seconds
+        setTimeout(() => {
+            notification.classList.remove('show'); // Hide the notification by removing 'show' class
+        }, 5000); // Hide after 5 seconds
+    } else {
+        alert("Please enter a valid email.");
+    }
+});

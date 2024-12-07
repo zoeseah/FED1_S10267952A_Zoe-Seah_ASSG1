@@ -1,277 +1,1102 @@
 /* General Reset */
-/* Reset some default styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Universal font and body styling */
-body, h1, h2, p, ul, li, a {
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  text-align: center;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fefefe;
+    overflow-x: hidden; /* Prevent horizontal scroll if any element overflows */
 }
 
-/* Logo Styling */
+/* Popup Modal Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it's above other content */
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 80%;
+}
+
+.popup-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.popup-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.popup-btn {
+    background-color: #FFC2F9; /* Match the header background color */
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-btn:hover {
+    background-color: #e19cc0; /* Darken the color on hover */
+}
+
+/* Close Button (X) Style */
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.closeBtn:hover {
+    color: #e19cc0; /* Change color on hover */
+}
+
+/* Header */
+.header {
+    background: #ffdcfc;
+    color: #fff;
+    padding: 30px 0; /* Smaller padding to reduce the size of the header */
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 85%;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the "Win up to $500, leave a review!" text */
+header a p {
+    font-size: 1.2rem;
+    color: #030303; /* Purple color */
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+header a p:hover {
+    color: #9c27b0; /* Lighter purple on hover */
+    text-decoration: underline;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* Padding for spacing inside nav bar */
+    background: #6A918D; /* Make nav bar background pink to match header */
+}
+
 .logo-img {
-  width: 150px; /* Fixed size for logo */
-  height: 100px ;
-  
+    width: 120px; /* Adjust logo size */
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Align nav links to the right */
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px; /* Spacing between links */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #fecdec; /* Darker purple on hover */
+    border-radius: 5px;
 }
 
 
-/* Navbar Styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #637b79;
-  padding: 5px 20px;
-  z-index: 5;
-  position: fixed;
-  top: 0%;
-  left: 0;
-  bottom: 85%;
-  width: 100%;
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('Images/Açaí\ Bowl.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* White overlay with 50% opacity */
+    z-index: 1; /* Ensures the overlay stays below the content */
 }
 
-.navbar .logo {
-  font-size: 1.8em;
-  color: #FFC2F9;
-  font-weight: bold;
+
+/* Adjusting the position of the hero content text box */
+.hero-content {
+    font-family: 'Anton SC', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+    color: #ffffff;
+    margin-top: 90 px;  /* Pushes the content below */
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
+.hero-btn {
+  text-decoration: none; /* Remove underline */
 }
 
-.navbar ul li {
-  margin: 0 15px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1em;
-}
-
-/* Hero Section with Acai Image */
-.acai-img {
-  background: url('Images/Açaí Bowl.jpeg') no-repeat center center;
-  background-size: cover; /* Ensure the image covers the entire container */
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-top: 60px;
-}
-
-/* Acai text container */
-.acai-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-shadow: 0px 0px 5px #000;
-  text-align: center; /* Centers the text */
-  z-index: 1;
-}
-
-.acai-text h1 {
-  font-size: 3rem; /* Increased size for emphasis */
-  margin-bottom: 15px; /* Space below the heading */
-}
-
-.acai-text p {
-  font-size: 1.5rem;
-  margin-bottom: 30px; /* Space below the paragraph */
-}
-
-.learn-more {
-  padding: 12px 25px;
-  background-color: #fff;
-  color: #000;
-  border: none;
-  cursor: pointer;
+.hero-btn button {
+  background-color: #ffffff;
+  color: #000000;
   font-size: 1.2rem;
-  text-transform: uppercase;
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s ease;
-}
-
-.learn-more:hover {
-  background-color: #ffffff; /* Change background on hover */
-  color: #fff; /* Change text color on hover */
-}
- 
-.control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  padding: 15px;
-  font-size: 2rem;
-  z-index: 10;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-.control:hover{
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.control.prev {
-  left: 10px;
+.hero-btn button:hover {
+  background-color: #fff59e;
 }
 
-.control.next {
-  right: 10px;
+
+/* Ensure the acai picture is not overlapped by the navbar */
+.hero {
+    margin-top: 80px;  /* Adjust this value according to the navbar height */
 }
 
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease; /* Smooth transition for scrolling */
+/* Styling for the testimonials section */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
+    gap: 30px;
+    padding: 50px;
+    background-color: #f4f4f4;  /* Light gray background */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+.testimonials .testimonial-item {
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonials .testimonial-item:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials .testimonial-item img {
+    border-radius: 50%;
+    width: 100px;  /* Adjust image size */
+    height: 100px; /* Adjust image size */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.testimonials .testimonial-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.testimonials .testimonial-item h4 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Carousel images styling */
 .carousel img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+    width: 100%;
+    height: 400px;  /* Makes carousel images taller */
+    object-fit: cover; /* Ensures images fill the container without distortion */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Additional improvements for carousel responsiveness */
+.carousel .carousel-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Carousel Section */
+.carousel-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.Main-text {
+    font-size: 96px;      /* Large heading size */
+    font-weight: bold;    /* Bold text */
+    color: #333;          /* Dark text color */
+    margin-bottom: 20px;  /* Space below the heading */
+    text-transform: uppercase;
+    font-family: 'Anton SC', sans-serif;
+}
+
+.Sub-text {
+    font-size: 34px;      /* Medium size for the description */
+    color: #EFA4CF;       /* Slightly lighter color for text */
+    margin-bottom: 40px;  /* Space below the description */
+    font-family: 'Anton SC', sans-serif;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px; /* Max width for the carousel */
+    margin: 0 auto; /* Center carousel */
+    overflow: hidden; /* Hide images outside the container */
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex;        /* Use flexbox to arrange the slides horizontally */
+    transition: transform 0.3s ease; /* Smooth sliding transition */
+}
+
+.carousel-slide {
+    flex: 0 0 100%;        /* Ensure each slide takes up the entire width of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;      /* Hide any part of the image that goes beyond the circle */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;    /* Make images circular */
+    object-fit: cover;     /* Ensure the image maintains aspect ratio within the circle */
+    max-width: 250px;      /* Control the size of the circle */
+    max-height: 250px;     /* Control the size of the circle */
+}
+
+/* Navigation buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Notification Style */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ec43ef; /* Customize the color */
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: none;  /* Hidden by default */
+  z-index: 1001;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification.show {
+  display: block;  /* Show the notification when the class is added */
+  animation: slideIn 0.5s ease-out;  /* Optional: Add an animation */
+}
+
+/* Footer */
+.footer {
+    background-color: #fad8f786; /* New footer background color */
+    padding: 50px 0;
+    text-align: center;
+    font-family: 'Braah One', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: control the max width of the footer */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+/* Header text in Footer */
+.footer-text h3, 
+.footer-text h1 {
+    font-family: 'Braah One', sans-serif; /* Apply Braah One font */
+    color: #333; /* Adjust color as needed */
+}
+
+.footer-text h3 {
+    color: #967287;
+    font-size: 1.5rem; /* You can adjust the size of h3 */
+}
+
+.footer-text h1 {
+    color: #EFA4CF;
+    font-size: 2.5rem; /* You can adjust the size of h1 */
+    margin-top: 0;  /* Removes any extra top margin */
+}
+
+.footer-text {
+    font-family: 'Inter', sans-serif; /* Apply the Inter font */
+    text-align: left;
+    max-width: 50%; /* Positioning text to the left */
+    font-size: 16px;
+    color: #333;
+}
+
+.footer-text p {
+    margin: 10px 0;
+}
+
+.footer-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.phone-image {
+    position: relative;
+    width: 200px;
+    height: 450px; /* Adjust the size of the phone image */
+}
+
+.phone-image img {
+    width: 100%;
+    height: auto;
+}
+
+.logo-on-phone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; /* Adjust the size of the logo on the phone */
+    height: auto;
+}
+
+.app-store img {
+    margin-top: 20px;
+    width: 150px; /* Adjust the size of the App Store logo */
+    height: auto;
+}
+
+/* New Footer Styles */
+.new-footer {
+    background-color: #967287;  /* Dark background */
+    color: #fff;             /* White text */
+    padding: 20px 0;         /* Padding for the footer */
+    text-align: center;
+}
+
+.new-footer .new-footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.new-footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.new-footer .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.new-footer .footer-links li {
+    margin: 0;
+}
+
+.new-footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.new-footer .footer-links a:hover {
+    color: #FFC2F9;  /* Hover color */
+}
+
+
+/* About Page */
+.about-main {
+    margin-top: 0; /* To account for the fixed header */
+    padding: 20px;
+}
+/* About Header Section */
+.about-header {
+    text-align: center; /* Center the text */
+    padding: 20px 20px; /* Adjust padding to reduce space */
+    background-color: #f5f5f5; /* Optional: Set a background color */
+    margin-top: 0; /* Remove top margin to eliminate gap */
+}
+
+.about-header h1 {
+    font-size: 3rem;
+    color: #4A148C; /* Adjust color if necessary */
+    margin-bottom: 10px; /* Adjust margin for spacing */
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0; /* Remove top margin */
+}
+
+/* About Section - Details */
+.about-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.about-details .about-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-details .about-text {
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+.about-details .about-text h2 {
+    font-size: 2rem;
+    color: #4A148C;
+}
+
+.about-details .about-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 15px;
+}
+
+/* About Section - Values */
+.about-values {
+    background-color: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+}
+
+.about-values h2 {
+    font-size: 2rem;
+    color: #4A148C;
+    margin-bottom: 20px;
+}
+
+.about-values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-values li {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
 }
 
 /* Team Section */
 .team-section {
-  padding: 60px 20px;
-  text-align: center;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .team-section h2 {
-  font-size: 2rem;
-  color: #4A148C;
-  margin-bottom: 30px;
+    font-size: 2rem;
+    color: #4A148C;
+    margin-bottom: 30px;
 }
 
 .team-cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .team-card {
-  background-color: white;
-  width: 280px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .team-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
+    width: 200px;  /* Ensure the width is consistent */
+    height: 200px; /* Set height equal to width to make the image circular */
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image circular */
+    margin-bottom: 20px;
 }
 
 .team-card p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 .team-card strong {
-  font-size: 1.2rem;
-  color: #4A148C;
+    font-size: 1.2rem;
+    color: #4A148C;
 }
+
+
+/* Footer */
+.about.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.about.footer-content {
+    margin: 0;
+}
+
+
+/* Menu Section */
+/* Menu Section */
+.menu {
+    margin-top: 0; /* Removed the previous margin-top to eliminate the gap */
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Optional: Add a background color to visually separate the section */
+}
+
+/* Menu Heading */
+.menu-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 0; /* Reset top margin */
+    margin-bottom: 30px; /* Optional: Add space below the heading */
+}
+
+/* Menu Items Grid */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center; /* Centers the grid items horizontally */
+}
+
+/* Individual Menu Item */
+.menu-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for each item */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover Effect for Menu Items */
+.menu-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+.menu-item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.menu-item-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4A148C;
+}
+
+.menu-item-description {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.menu-item-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Build Your Own Bowl Section */
+.build-your-own {
+    padding: 40px 0;
+}
+
+.build-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.build-description {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Build Steps */
+.build-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.build-step {
+    text-align: center;
+}
+
+.build-step-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.build-step h3 {
+    font-size: 1.5rem;
+    color: #4A148C;
+    margin-bottom: 10px;
+}
+
+.build-step p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Button */
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #4A148C;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: #6A1B9A;
+}
+
+
+/* Blog Section */
+.blog-posts {
+    width: 100%; /* Make the blog section fill the width */
+    padding: 20px;
+}
+
+/* Blog Heading */
+.blog-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Category Filter */
+.category-filter {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#categorySelect {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #4A148C;
+    border-radius: 5px;
+}
+
+/* Blog Container */
+.blog-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Change this to 1fr to enlarge the posts */
+    gap: 30px;
+}
+
+/* Make each blog post take up more space */
+.blog-post {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.blog-post:hover {
+    transform: scale(1.05); /* Slightly enlarge the blog post on hover */
+}
+
+/* Image inside Blog Post */
+.blog-image img {
+    width: 100%;
+    height: 300px; /* Enlarge the image height */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Blog Post Information */
+.blog-info {
+    text-align: center;
+}
+
+.blog-title {
+    font-size: 2rem; /* Enlarge the title */
+    color: #4A148C;
+    margin-bottom: 10px;
+}
+
+.blog-excerpt {
+    font-size: 1.2rem; /* Slightly increase the font size */
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    font-size: 1.2rem;
+    color: #4A148C;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Pagination Section */
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    font-size: 1.5rem; /* Increase pagination size */
+    color: #4A148C;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    padding: 20px;
+}
+
+.recent-posts {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.recent-posts h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.recent-posts ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recent-posts li {
+    margin-bottom: 10px;
+}
+
+.recent-posts a {
+    color: #4A148C;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.recent-posts a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+
 
 /* Contact Section Styling */
 .contact-section {
-  padding: 50px 20px;
-}
-
-.contact-header h1 {
-  font-size: 2.5em;
-  color: #6cb4a0;
-  margin-bottom: 10px;
-}
-
-.contact-header p {
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 30px;
-}
+    padding: 50px 20px;
+  }
+  
+  .contact-header h1 {
+    font-size: 2.5em;
+    color: #6cb4a0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .contact-header p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+  }  
 
 /* Contact Form Styling */
 .contact-form-container {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form-container label {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .contact-form-container input, .contact-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+  }
+  
+  .contact-form-container input:focus, .contact-form-container textarea:focus {
+    outline: none;
+    border-color: #6cb4a0;
+  }
+  
+  .submit-button {
+    background-color: #6cb4a0;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #4b8a7e;
+  }
+  
+
+  /* Reviews page  */
+  
+  .section-heading {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+  .leave-review {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form-container label {
-  display: block;
-  font-size: 1.1em;
-  color: #333;
-  margin-bottom: 5px;
-  text-align: left;
+.review-form-container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.contact-form-container input, .contact-form-container textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  font-size: 1em;
+.review-form {
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-form-container input:focus, .contact-form-container textarea:focus {
-  outline: none;
-  border-color: #6cb4a0;
+.form-group {
+    margin-bottom: 15px;
 }
 
-.submit-button {
-  background-color: #6cb4a0;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
 }
 
-.submit-button:hover {
-  background-color: #4b8a7e;
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-/* Footer Styling */
-.footer {
-  background-color: #6cb4a0;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: #ff4d5a;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #e0424e;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.review-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-header span {
+    font-size: 18px;
+    color: #ff4d5a;
+}
+
+.review-card p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
 }

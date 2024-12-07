@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Braah+One&family=Anton+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stykes.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Acai Nomz</title>
 </head>
 <body>
@@ -44,7 +44,9 @@
         <section class="hero" id="hero">
             <div class="hero-content">
                 <h1>SMOOTHIE & ACAI BOWLS<br>Made with Only All-Natural <br> Ingredients</h1> 
-                <button class="hero-btn" id="learnMoreBtn">Learn More</button>
+                <a href="about.html" class="hero-btn">
+                    <button>Learn More</button>
+                </a>
             </div>
         </section>
 
@@ -93,16 +95,21 @@
         </div>
     </div>
 
-    <!-- Newsletter Signup Section -->
-   <!-- Newsletter Signup Section -->
+<!-- Newsletter Section -->
 <section class="newsletter">
     <h2>Join Our Healthy Tribe!</h2>
     <p>Get the latest updates, offers, and healthy tips delivered to your inbox.</p>
     <form action="submit-form.php" method="POST" class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="Your Email" required>
+        <input type="email" placeholder="Your Email" id="emailInput" required>
         <button type="submit" class="submit-btn">Subscribe</button>
     </form>
 </section>
+
+<!-- Notification -->
+<div id="notification" class="notification">
+    <p>Thank you for subscribing to our newsletter!</p>
+</div>
+
 
 
     <!-- Footer Section -->
@@ -141,6 +148,6 @@
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
