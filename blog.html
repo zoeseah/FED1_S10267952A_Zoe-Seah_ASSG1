@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stykes.css">
+    <title>Blog - Acai Nomz</title>
+</head>
+<body>
+    <!-- Header (Navigation Bar) -->
+    <div class="container">
+      <nav class="nav">
+          <img src="Images/Logo.png" alt="Acai Nomz Logo" class="logo-img">
+          <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+  </div>
+</header>
+
+
+    <!-- Main Content Section -->
+    <div class="content-wrapper">
+        <!-- Search Bar -->
+        <section class="search-bar">
+            <input type="text" id="search" placeholder="Search Blog Posts..." class="search-input">
+        </section>
+
+        <!-- Blog Posts Section -->
+        <main>
+            <section class="blog-posts">
+                <h2 class="blog-heading">Latest Blog Posts</h2>
+
+                <!-- Categories Filter -->
+                <div class="category-filter">
+                    <h3>Filter by Category:</h3>
+                    <select id="categorySelect">
+                        <option value="all">All</option>
+                        <option value="bowls">Açaí Bowls</option>
+                        <option value="health">Healthy Eating</option>
+                    </select>
+                </div>
+
+                <div class="blog-container">
+                    <div class="blog-post" data-category="bowls">
+                        <div class="blog-image">
+                            <img src="Images/blog-image1.jpg" alt="Blog Post 1">
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">How to Make the Perfect Açaí Bowl</h3>
+                            <p class="blog-excerpt">Learn the steps to create the perfect Açaí bowl that will satisfy your cravings and keep you healthy!</p>
+                            <a href="blog-post-1.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-post" data-category="health">
+                        <div class="blog-image">
+                            <img src="Images/blog-image2.jpg" alt="Blog Post 2">
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">Benefits of Açaí Berries</h3>
+                            <p class="blog-excerpt">Discover the health benefits of Açaí berries and how they can boost your energy and immune system.</p>
+                            <a href="blog-post-2.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-post" data-category="bowls">
+                        <div class="blog-image">
+                            <img src="Images/blog-image3.png" alt="Blog Post 3">
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">Top 5 Toppings for Your Açaí Bowl</h3>
+                            <p class="blog-excerpt">Not sure what to add on your Açaí bowl? Here are the top 5 toppings you must try for the ultimate bowl!</p>
+                            <a href="blog-post-3.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination Section -->
+                <div class="pagination">
+                    <a href="#" class="prev">❮ Previous</a>
+                    <a href="#" class="next">Next ❯</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar with Recent Posts -->
+        <aside class="sidebar">
+            <div class="recent-posts">
+                <h3>Recent Posts</h3>
+                <ul>
+                    <li><a href="blog-post-1.html">How to Make the Perfect Açaí Bowl</a></li>
+                    <li><a href="blog-post-2.html">Benefits of Açaí Berries</a></li>
+                    <li><a href="blog-post-3.html">Top 5 Toppings for Your Açaí Bowl</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h3>About Acai Nomz</h3>
+                    <p>Your go-to spot for delicious and healthy Açaí bowls made with natural ingredients. Join us on our mission to provide the best Açaí experience!</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+

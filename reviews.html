@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stykes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <title>Customer Reviews - Acai Nomz</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="container">
+        <nav class="nav">
+            <img src="Images/Logo.png" alt="Acai Nomz Logo" class="logo-img">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Leave a Review Form -->
+        <section class="leave-review">
+            <h2 class="section-heading">Leave Your Review</h2>
+            <div class="review-form-container">
+                <form action="submit-review.php" method="POST" class="review-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Rating:</label>
+                        <select id="rating" name="rating" required>
+                            <option value="1">1 Star</option>
+                            <option value="2">2 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="5">5 Stars</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review">Your Review:</label>
+                        <textarea id="review" name="review" placeholder="Write your review here" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Review</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section class="customer-reviews">
+            <h2 class="section-heading">What Our Customers Say</h2>
+            <div class="review-cards">
+                <!-- Example Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <h3>Jessica</h3>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p>"The best Açaí bowls in town! Fresh, delicious, and healthy. I come here every week!"</p>
+                </div>
+
+                <!-- Example Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <h3>David</h3>
+                        <span>⭐⭐⭐⭐</span>
+                    </div>
+                    <p>"I love the build-your-own bowl feature. So many options to choose from, it never gets boring!"</p>
+                </div>
+
+                <!-- Example Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <h3>Emily</h3>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p>"Açaí Nomz is my go-to place for a healthy breakfast. The bowls are always fresh and flavorful."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Acai Nomz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
