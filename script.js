@@ -169,3 +169,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 5000); // Hides after 5 seconds
     });
 });
+
+
+//responsive for index 
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}

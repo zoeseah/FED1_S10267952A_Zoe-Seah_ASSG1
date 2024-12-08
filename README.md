@@ -23,49 +23,171 @@ Additionally, interactive elements like a testimonial carousel and modal pop-ups
 
 Features
 Existing Features
-Hero Section: Displays an eye-catching image of the smoothie bowls with a clear call-to-action button ("Learn More").
-Carousel Section: Shows a rotating selection of menu items, allowing users to explore different options.
-Testimonials Section: Displays reviews from customers to build trust and credibility.
-Newsletter Signup: Users can subscribe to receive the latest updates and offers.
-Mobile App Promotion: A section dedicated to informing users about the Acai Nomz mobile app, including the loyalty program.
-Footer: Contains information about the app, links to privacy policy, and download links for the app store.
+------------------
+1. Index Page (Home)
+Features:
+-   Header with Logo & Navigation Bar:
+   - Navigation links to other pages: About, Menu, Blog, Contact.
+  -  Hero Section / Main Call-to-Action (CTA)
+  -  Prominent message “Learn More” with a button linked to the About page.
+   - Featured Menu Items in carousel
+   - Customer Testimonials / Reviews:
+   - Short reviews or quotes from customers showcasing positive feedback, potentially linking to the Reviews page.
+   - Footer linked to contact page 
+   - App store logo linked to app store
+   - Layout adjusts for mobile, tablet, and desktop screen sizes.
+
+2. About Page
+Features:
+Company Story / Mission:
+A brief section explaining the story behind the company, mission, and values.
+Team Section:
+Introduces key team members with their names, roles, and photos.
+Company Achievements / Milestones:
+A section highlighting important achievements, milestones, or community involvement.
+Responsive Design:
+Layout and images adjust for different screen sizes and devices (mobile, tablet, desktop).
+3. Menu Page
+Features:
+Menu Listings:
+A detailed list of menu items with images, descriptions, and prices.
+Categories (e.g., "Bowls", "Smoothies", "Snacks", etc.) for easy navigation.
+Interactive Filters/Sorting:
+Ability to filter menu items by category, price range, or ingredients (if implemented).
+Special Offers / Promotions:
+Display of any ongoing promotions, discounts, or special deals.
+Product Information:
+Nutritional information (if applicable), allergen warnings, and special ingredients for each menu item.
+Responsive Design:
+
+Menu adjusts for mobile and tablet views without breaking the layout.
+4. Contact Page
+Features:
+Contact Form:
+Fields for Name, Email, Role, and Message.
+Validation for required fields and email format.
+Success notification upon successful form submission.
+Map Integration (Optional):
+Interactive map showing the location of the business, linked to Google Maps or another map service.
+Contact Information:
+Display of the company’s contact details: phone number, email address, and physical address.
+Responsive Design:
+Form fields and contact information adjust to different screen sizes.
+5. Reviews Page
+Features:
+Customer Review Submission Form:
+Fields for Name, Email, Rating (1-5 stars), and Review Text.
+Submit button with form validation.
+Success message upon successful submission.
+Customer Reviews Display:
+Display of submitted reviews with customer names, ratings (stars), and their written reviews.
+Pagination or “Load More” functionality (if many reviews are submitted).
+Search Functionality:
+Search bar to filter or search for specific reviews.
+Responsive Design:
+
+Reviews display in a clean and readable format across different screen sizes (mobile, tablet, desktop).
+6. Blog Page
+Features:
+Blog Post Listings:
+Display of all blog posts with titles, featured images, brief excerpts, and post dates.
+Each blog post linked to its full article.
+Pagination or “Load More” Button:
+Pagination system or a button to load additional blog posts as the user scrolls.
+Search Functionality:
+Search bar to search for specific blog posts or keywords.
+Categories or Tags:
+Option to filter blog posts by categories or tags (e.g., "Healthy Eating", "Recipes", etc.).
+Responsive Design:
+Blog page adjusts for all screen sizes and devices, ensuring posts are easily readable on both mobile and desktop devices.
+
+
+
 Features Left to Implement
-Live Chat Support: A live chat feature where users can interact with customer service.
-Online Ordering System: A feature allowing users to order directly from the website for pickup or delivery.
+-Live Chat Support: A live chat feature where users can interact with customer service.
+-Online Ordering System: A feature allowing users to order directly from the website for pickup or delivery.
+- Contact page does not fully function 
+
 Technologies Used
 Languages, Frameworks, and Libraries
-HTML5: Used for structuring the content on the page. HTML5 provides support for multimedia and web applications.
-CSS3: Used for styling the website to ensure a responsive, attractive design. Flexbox and Grid were utilized for layout management.
+HTML: Used for structuring the content on the page. HTML5 provides support for multimedia and web applications.
+CSS: Used for styling the website to ensure a responsive, attractive design. Flexbox and Grid were utilized for layout management.
 JavaScript: Used for interactive elements such as the modal pop-up, carousel slider, and newsletter notification.
-jQuery: Simplifies DOM manipulation, especially for the carousel and modal pop-ups.
+ Simplified DOM manipulation, especially for the carousel and modal pop-ups.
 Google Fonts: Used for typography, including 'Braah One' and 'Inter' fonts, to ensure readability and consistency in the design.
-Adobe XD: Used for wireframing and prototyping the design of the website.
-Libraries and Tools
-FontAwesome: For icons such as arrows in the carousel and buttons.
-jQuery: Simplifies DOM manipulation and animations for the carousel.
-Testing
-User Stories Testing
-Contact Form:
 
-Go to the "Contact Us" page.
-Try to submit the empty form and verify that an error message about the required fields appears.
-Try to submit the form with an invalid email address and verify that a relevant error message appears.
-Try to submit the form with all inputs valid and verify that a success message appears.
+1. Index Page (Home)
+Scenarios to Test:
+Page Loading:
+Open the index page in different browsers (Chrome, Firefox, Safari) and ensure that the page loads without issues.
+Verify that the logo and navigation links are functional.
+Navigation Links:
+Ensure that all navigation links (Home, About Us, Menu, Blog, Contact) work as expected and take the user to the corresponding pages.
+Responsive Design:
+Resize the browser window or test on different devices (desktop, tablet, mobile) to ensure the layout adjusts properly.
+Test if images and buttons scale and align correctly across different screen sizes.
 Newsletter Signup:
-
 Enter an email address in the newsletter signup form.
 Verify that a notification message pops up confirming the subscription.
-Cross-Browser and Responsiveness Testing:
 
-The website was tested on multiple browsers, including Chrome, Firefox, Safari, and Edge, to ensure compatibility.
-It was also tested on various devices with different screen sizes (mobile, tablet, desktop) to ensure responsiveness.
+2. About Page
+Scenarios to Test:
+Page Content:
+
+Verify that all text is visible and correctly displayed (no broken sentences, no text clipping).
+Ensure that the "Our Story" and "Our Values" sections load correctly and are easy to read.
+Images and Team Section:
+
+Test the image loading for the team section. Ensure all images appear correctly and are aligned properly with text.
+Ensure the “Meet Our Team” section displays team member names and their roles.
+Responsive Design:
+
+3. Menu Page
+Scenarios to Test:
+Menu Display:
+Verify that the menu items load correctly with images, names, and descriptions.
+Check that the prices are displayed correctly for each item.
+Responsive Layout:
+Ensure the menu adjusts correctly on mobile devices (images scale down, text stays readable).
+Test if the menu is easily navigable, with no horizontal scrolling on smaller screens.
+Check if any interactive elements, such as dropdowns, work as expected.
+4. Contact Page
+Scenarios to Test:
+Form Validation:
+Empty Form Submission:
+Navigate to the "Contact Us" page and try submitting the form with all fields empty. Ensure that an error message appears, like "This field is required."
+Invalid Email:
+Submit the form with an invalid email format (e.g., john.doe@com) and check that a relevant error message, like "Please enter a valid email address," appears.
+Successful Submission:
+Fill in all fields correctly and submit the form. Verify that the success notification ("Form submitted successfully!") pops up and the form resets.
+5. Reviews Page
+Scenarios to Test:
+Review Submission:
+
+Empty Review Form:
+Try submitting the review form without entering any information. Ensure the form does not submit and an error message like "This field is required" appears.
+Invalid Email:
+Try entering an invalid email and check for validation errors.
+Valid Review Submission:
+Fill in all fields with valid data and submit the form. Verify that the form submission triggers a success message (e.g., "Thank you for your review!").
+Test the responsiveness of the review cards, ensuring they display correctly on mobile screens.
+
+6. Blog Page
+Scenarios to Test:
+Blog Post Display:
+Ensure that blog posts are loading properly, with titles, images, and content displayed clearly.
+Test if the blog post images and text format are correct, with no overlapping elements.
+Test the blog page on multiple devices, ensuring that images and text scale properly.
+Make sure that the layout doesn’t break and remains readable across all screen sizes.
+
 Bugs & Issues
 Mobile View: In some smaller screen sizes, the text in the hero section was slightly cut off, but this was fixed by adjusting the font size in mobile views.
 Carousel Navigation: On some occasions, the carousel arrows would overlap with the images. This issue was resolved by adjusting the z-index of the buttons.
+
 Credits
 Content
-The text for the "Our Loyalty App" section was inspired by the Acai Nomz brand and their app content.
-Media
-The images of the menu items were sourced from the official Acai Nomz product photos.
+The images included were mainly sourced from pinterest or online. I do not take credits for any external links included in my code.
+
+
 Acknowledgements
-I received inspiration for this project from the simple, visually-driven websites in the food and health industry, especially those focusing on fresh ingredients and user-centric design.
+I received inspiration from my friends and all the different acai websites. I would also like to express my gratitude towards Mr Andy for understanding my situation and giving me an extension.
