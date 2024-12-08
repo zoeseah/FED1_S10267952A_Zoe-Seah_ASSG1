@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(() => {
             currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
             moveToSlide(currentIndex);
-        }, 3000); // Auto-scroll every 3 seconds
+        }, 3000); 
     };
 
     autoScroll(); // Start auto-scrolling when the page loads
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Newsletter form submission
 document.getElementById('newsletterForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
 
     const emailInput = document.getElementById('emailInput').value; // Get email input value
 
@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Log form data (you can also use this to send the data to a server via AJAX if needed)
         console.log('Form Submitted!');
         console.log('Name:', name);
         console.log('Email:', email);
@@ -123,9 +122,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optionally hide the notification after it fades out
         setTimeout(function () {
             notification.style.display = 'none'; // Hide after fade-out completes
-        }, 3500); // Wait a little longer (for the fade-out animation to complete)
+        }, 3500); 
 
-        // Reset the form
         form.reset();
     });
 });
