@@ -1,25 +1,23 @@
-// Show the popup modal when the page loads (only the first time)
+// Show the popup modal every time the page loads (no check for first-time visit)
 window.onload = () => {
     const popupOverlay = document.getElementById('popupOverlay');
     const gotItBtn = document.getElementById('gotItBtn');
     const closeBtn = document.getElementById('closeBtn');
 
-    if (!localStorage.getItem('hasVisited')) {
-        // If not, show the popup
-        popupOverlay.style.display = 'flex'; // Display popup
-        localStorage.setItem('hasVisited', 'true'); // Mark user as visited
-    }
+    // Show the popup (no conditions for first-time visit)
+    document.getElementById('popupOverlay').style.display = 'flex';
 
     // Close the popup when the "Got it" button is clicked
-    gotItBtn.addEventListener('click', () => {
-        popupOverlay.style.display = 'none';
+    document.getElementById('gotItBtn').addEventListener('click', function() {
+        document.getElementById('popupOverlay').style.display = 'none';
     });
 
     // Close the popup when the close button is clicked
-    closeBtn.addEventListener('click', () => {
-        popupOverlay.style.display = 'none';
+    document.getElementById('closeBtn').addEventListener('click', function() {
+        document.getElementById('popupOverlay').style.display = 'none';
     });
 }
+
 
 // Carousel functionality
 document.addEventListener('DOMContentLoaded', () => {

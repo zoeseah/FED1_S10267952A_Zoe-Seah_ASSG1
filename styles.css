@@ -13,28 +13,94 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll if any element overflows */
 }
 
-/* Popup Modal Styles */
+
+/* Popup Overlay */
 .popup-overlay {
+    display: none;  /* Initially hidden */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    display: none; /* Hidden by default */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Make sure it's above other content */
+    z-index: 1000;  /* Make sure it's on top */
 }
 
+/* Popup Content */
 .popup-content {
     background-color: #fff;
     padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    position: relative;  /* Important for absolute positioning of the close button */
+}
+
+.popup-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#gotItBtn {
+    padding: 10px 20px;
+    background-color: #4A148C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#gotItBtn:hover {
+    background-color: #6A1B9A;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333; /* Dark color for the close button */
+    cursor: pointer;
+}
+
+.closeBtn:hover {
+    color: #e19cc0; /* Change color on hover */
+}
+
+
+/* Popup Overlay */
+.popup-overlay {
+    display: none;  /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  /* Make sure it's on top */
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 80%;
+    position: relative;  /* Important for absolute positioning of the close button */
 }
 
 .popup-content h2 {
@@ -47,36 +113,27 @@ body {
     margin-bottom: 20px;
 }
 
-.popup-btn {
-    background-color: #FFC2F9; /* Match the header background color */
-    color: #000;
+#gotItBtn {
     padding: 10px 20px;
+    background-color: #FFC2F9;
+    color: #fff;
     border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    text-transform: uppercase;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.popup-btn:hover {
-    background-color: #e19cc0; /* Darken the color on hover */
+.popup-btn:hover{
+        background-color: #e19cc0;
 }
 
-/* Close Button (X) Style */
-.closeBtn {
+/* Close Button */
+.close-btn {
     position: absolute;
     top: 10px;
-    right: 0px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #000;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333; /* Dark color for the close button */
     cursor: pointer;
-}
-
-.closeBtn:hover {
-    color: #e19cc0; /* Change color on hover */
 }
 
 /* Header */
@@ -206,50 +263,58 @@ header a p:hover {
     margin-top: 80px;  /* Adjust this value according to the navbar height */
 }
 
-/* Styling for the testimonials section */
+/* Testimonials Section */
 .testimonials {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
-    gap: 30px;
-    padding: 50px;
-    background-color: #f4f4f4;  /* Light gray background */
-    border-radius: 15px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.testimonials .testimonial-item {
-    padding: 25px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 50px 20px;
+    background-color: #f9f9f9;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonials .testimonial-item:hover {
-    transform: translateY(-10px); /* Slight lift effect on hover */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.testimonials .testimonial-item img {
-    border-radius: 50%;
-    width: 100px;  /* Adjust image size */
-    height: 100px; /* Adjust image size */
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.testimonials .testimonial-item p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-.testimonials .testimonial-item h4 {
-    font-size: 1.2rem;
-    color: #333;
+/* Testimonials Header */
+.testimonials-heading {
+    font-size: 2.5rem; /* Larger font size */
+    color: #4A148C; /* Matching theme color */
+    margin-bottom: 30px; /* Space below the header */
     font-weight: bold;
+}
+
+/* Testimonials Items */
+.testimonial-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Adjust columns as needed */
+    gap: 20px;
+    justify-items: center; /* Center align the items */
+}
+
+.testimonial-item {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Allow items to take up more space */
+    max-width: 350px; /* Prevent overly large items */
+    text-align: center; /* Center the text */
+}
+
+.testimonial-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial-text h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4A148C;
+    margin-bottom: 10px;
+}
+
+.testimonial-text p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 /* Carousel images styling */
