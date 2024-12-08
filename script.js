@@ -9,7 +9,7 @@ window.onload = () => {
 
     // Close the popup when the "Got it" button is clicked
     document.getElementById('gotItBtn').addEventListener('click', function() {
-        document.getElementById('popupOverlay').style.display = 'none';
+        window.location.href = 'menu.html';;
     });
 
     // Close the popup when the close button is clicked
