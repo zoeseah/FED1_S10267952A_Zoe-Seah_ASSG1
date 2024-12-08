@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>About Us - Acai Nomz</title>
 </head>
@@ -38,7 +39,7 @@
             </div>
             <div class="about-text">
                 <h2>Our Story</h2>
-                <p>At Acai Nomz, we believe in providing our customers with the freshest and healthiest Acai bowls and smoothies made from natural, locally-sourced ingredients. Our journey began in [Year] with the mission to deliver a unique taste experience that also nourishes the body.</p>
+                <p>At Acai-Nomz, we believe in providing our customers with the freshest and healthiest Acai bowls and smoothies made from natural, locally-sourced ingredients. Our journey began in 2022 with the mission to deliver a unique taste experience that also nourishes the body.</p>
                 <p>We’re passionate about creating food that is both tasty and beneficial to your health. Whether you're looking for a post-workout snack or a refreshing treat, we’ve got something for everyone!</p>
             </div>
         </section>
@@ -48,7 +49,7 @@
             <ul>
                 <li><strong>Freshness</strong> - We prioritize fresh, quality ingredients in every bowl.</li>
                 <li><strong>Health</strong> - We focus on offering nutritious options for all lifestyles.</li>
-                <li><strong>Community</strong> - We care about supporting local farmers and sustainable practices.</li>
+                <li><strong>Community</strong> - We value our customers and strive to build a healthy community</li>
             </ul>
         </section>
 
@@ -57,19 +58,72 @@
             <div class="team-cards">
                 <div class="team-card">
                     <img src="Images/Staff1.jpeg" alt="Team Member 1">
-                    <p><strong>Team 1</strong><br>Founder & CEO</p>
+                    <p><strong>Team 1</strong><br>Founders</p>
                 </div>
                 <div class="team-card">
                     <img src="Images/Staff2.jpeg" alt="Team Member 2">
-                    <p><strong>Team 2</strong><br>Head Chef</p>
+                    <p><strong>Team 2</strong><br>Acai-Partners</p>
                 </div>
                 <div class="team-card">
                     <img src="Images/Staff3.jpeg" alt="Team Member 3">
-                    <p><strong>Team 3</strong><br>Marketing Director</p>
+                    <p><strong>Team 3</strong><br>Marketing Directors</p>
                 </div>
             </div>
         </section>
+
+        <!-- Team's Message Section -->
+        <section class="team-message">
+            <div class="about-text">
+                <p>Hey there!</p>
+                <p>Whether you’re a first-timer or a regular, your support means the world to us.</p>
+                <p>Our journey started with a simple idea: making healthy eating something you actually look forward to. From the freshest ingredients to the boldest flavors, every bowl we create is made with care, passion, and a whole lot of love.</p>
+                <p>We’re more than just a spot for acai bowls—we’re here to spread good vibes, fuel your day, and be a place where you can always count on something delicious.</p>
+                <p>So, here’s to you and all the tasty adventures ahead. Let’s keep living, loving, and nomming!</p>
+                <p>With gratitude,<br>The Acai-Nomz Team</p>
+            </div>
+        </section>
+
     </main>
+<!-- Form Section -->
+<section class="contact-message-section">
+    <div class="contact-message-container">
+        <!-- Left Text Block -->
+        <div class="contact-message-text">
+            <h2>Any Questions, Interested in being part of the team?</h2>
+            <p>Feel free to drop us a message! If you are interested in being part of the Acai-Nomz family, please let us know your brief personal details and we'll get back to you shortly!</p>
+        </div>
+
+        <!-- Right Input Form (Name, Email, Role) -->
+        <form id="contact-form" class="contact-message-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Role Applying For</label>
+                <select id="role" name="role">
+                    <option value="admin">Acai-Partner</option>
+                    <option value="chef">Cashier</option>
+                    <option value="manager">Manager</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Notification Container (Initially hidden) -->
+<div id="notification" class="notification" style="display: none;">
+    <p>Form submitted successfully! We'll get back to you shortly.</p>
+</div>
+
+
 
     <!-- Footer -->
  
@@ -79,7 +133,7 @@
             <ul class="footer-links">
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
     </footer>
