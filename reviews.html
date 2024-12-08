@@ -21,7 +21,6 @@
             </ul>
         </nav>
     </div>
-  </header>>
 
     <!-- Main Content -->
     <main>
@@ -29,7 +28,7 @@
         <section class="leave-review">
             <h1 class="section-heading">Leave Your Review</h1>
             <div class="review-form-container">
-                <form action="submit-review.php" method="POST" class="review-form">
+                <form id="review-form" class="review-form">
                     <div class="form-group">
                         <label for="name">Your Name:</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -58,56 +57,28 @@
 
                     <button type="submit" class="submit-btn">Submit Review</button>
                 </form>
-            </div>
-        </section>
 
-        <!-- Customer Reviews Section -->
-        <section class="customer-reviews">
-            <h2 class="section-heading">What Our Customers Say</h2>
-            <div class="review-cards">
-                <!-- Example Review 1 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <h3>Jessica</h3>
-                        <span>⭐⭐⭐⭐⭐</span>
-                    </div>
-                    <p>"The best Açaí bowls in town! Fresh, delicious, and healthy. I come here every week!"</p>
-                </div>
-
-                <!-- Example Review 2 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <h3>David</h3>
-                        <span>⭐⭐⭐⭐</span>
-                    </div>
-                    <p>"I love the build-your-own bowl feature. So many options to choose from, it never gets boring!"</p>
-                </div>
-
-                <!-- Example Review 3 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <h3>Emily</h3>
-                        <span>⭐⭐⭐⭐⭐</span>
-                    </div>
-                    <p>"Açaí Nomz is my go-to place for a healthy breakfast. The bowls are always fresh and flavorful."</p>
+                <!-- Success Message (hidden by default) -->
+                <div id="success-message" style="display:none; color: green; font-size: 18px; margin-top: 20px;">
+                    Review submitted successfully! Thank you for your feedback.
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-   
     <footer class="new-footer">
         <div class="new-footer-content">
             <p>&copy; 2024 Acai Nomz. All Rights Reserved.</p>
             <ul class="footer-links">
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
     </footer>
 
+    <!-- External JavaScript File -->
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,12 +1,12 @@
 # FED1_S10267952A_Zoe-Seah_ASSG1
 Project Overview: Acai-Nomz Website
 Project Name: Acai-Nomz
-Project Type:Promotional Website for acai brand 
+Project Type:Promotional Website for Acai brand 
 
 Overview
-Acai-Nomz is a health-focused food service that specializes in providing smoothie and açaí bowls made from only all-natural ingredients. The website's primary goal is to enhance the customer experience by offering a visually appealing, user-friendly platform to explore the menu, order online, and access information about the loyalty program. The website is designed to serve both existing and potential customers, offering them a seamless experience while encouraging healthy eating habits.
+Acai-Nomz is a health-focused food service that specializes in providing smoothie and açaí bowls made from only all-natural ingredients. Aimed to attract customers for avocading healthy yet delightful desserts. The website's primary goal is to enhance the customer experience by offering a visually appealing, user-friendly platform to explore the menu and access information about the acai brand such as the loyalty app. The website is designed to serve both existing and potential customers, offering them a seamless experience while encouraging healthy eating habits.
 
-The design emphasizes vibrant imagery, clear navigation, and intuitive features. The website features a homepage with an interactive hero section, a testimonials section showcasing customer feedback, a newsletter sign-up section, and a footer with information about the mobile app and loyalty program. It also includes a mobile-responsive design to cater to all users across different devices.
+The design emphasizes vibrant imagery, clear navigation, and interactive features. The website features a homepage with an interactive hero section, a testimonials section showcasing customer feedback, a newsletter sign-up section, and a footer with information about the mobile app and loyalty program. It also includes a mobile-responsive design to cater to all users across different devices.
 
 Design Process
 The Acai Nomz website was designed with a focus on providing an easy and delightful browsing experience for health-conscious users who want to discover and order natural smoothie bowls and açaí options. The target audience includes individuals who are seeking healthy, quick meals on the go, as well as customers who are interested in the Acai Nomz mobile app and its loyalty rewards system.

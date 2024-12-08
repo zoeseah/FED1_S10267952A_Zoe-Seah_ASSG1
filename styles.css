@@ -152,12 +152,24 @@ body {
 }
 
 /* Styling for the "Win up to $500, leave a review!" text */
-header a p {
-    font-size: 1.2rem;
-    color: #030303; /* Purple color */
+.header a p { 
     text-align: center;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: bold;
+    animation: blink-animation 1.5s infinite; /* Apply animation */
+}
+
+/* Define the blinking animation */
+@keyframes blink-animation {
+    0% {
+        color: #961a1a; /* Red color */
+    }
+    50% {
+        color: #676363; /* Green color */
+    }
+    100% {
+        color: #000000; /* Red color */
+    }
 }
 
 header a p:hover {
@@ -222,7 +234,7 @@ header a p:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* White overlay with 50% opacity */
+    background: rgba(255, 255, 255, 0.15); /* White overlay  */
     z-index: 1; /* Ensures the overlay stays below the content */
 }
 
@@ -560,6 +572,10 @@ header a p:hover {
 }
 
 
+
+
+
+
 /* About Page */
 .about-main {
     margin-top: 0; /* To account for the fixed header */
@@ -693,6 +709,129 @@ header a p:hover {
     color: #4A148C;
 }
 
+/* From Our Team Section */
+.team-message {
+    background-color: #61465e39;
+    padding: 40px 20px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-message .about-text p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.team-message .about-text p:last-child {
+    font-style: italic;
+    color: #333;
+}
+
+/* Contact Message Section */
+.contact-message-section {
+    background-color: #fad8f758; /* Light pink background */
+    padding: 40px 20px;
+    margin-bottom: 0px; /* Remove space before the footer */
+}
+
+.contact-message-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-message-text {
+    width: 48%; /* Takes up almost half of the container */
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-message-text h2 {
+    font-size: 34px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact-message-text p {
+    font-size: 20px;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+}
+
+.contact-message-form {
+    width: 48%; /* Takes up the other half of the container */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-message-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-message-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-message-form input,
+.contact-message-form select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Line-style input */
+    background: transparent;
+    width: 100%;
+}
+
+.contact-message-form input:focus,
+.contact-message-form select:focus {
+    border-color: #ff4d5a; /* Red focus line */
+    outline: none;
+}
+
+.contact-message-form select {
+    -webkit-appearance: none; /* Remove default dropdown appearance */
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 20px; /* Space for dropdown arrow */
+
+}
+
+
+/* Submit Button */
+.submit-btn {
+    background-color: #0a3a0e;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e0424e;
+}
+
+
 
 /* Footer */
 .about.footer {
@@ -707,7 +846,7 @@ header a p:hover {
 }
 
 
-/* Menu Section */
+
 /* Menu Section */
 .menu {
     margin-top: 0; /* Removed the previous margin-top to eliminate the gap */
@@ -832,6 +971,10 @@ header a p:hover {
 .btn-submit:hover {
     background-color: #6A1B9A;
 }
+
+
+
+
 
 
 /* Blog Section */
@@ -992,14 +1135,16 @@ footer p {
 
 
 
+
+
 /* Contact Section Styling */
 .contact-section {
     padding: 50px 20px;
   }
   
   .contact-header h1 {
-    font-size: 2.5em;
-    color: #6cb4a0;
+    font-size: 3rem;
+    color: #fca9d1;
     margin-bottom: 10px;
     text-align: center;
   }
@@ -1060,21 +1205,38 @@ footer p {
   }
   
 
+
+
+  
   /* Reviews page  */
   
-  .section-heading {
+/* Section Heading */
+.section-heading {
     font-size: 24px;
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
-  .leave-review {
+
+/* Leave Review Section */
+.leave-review {
     background-color: #ffffff;
     padding: 40px 20px;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+/* Section Heading for Leave Review */
+.leave-review .section-heading {
+    font-size: 32px;  /* Make the heading larger */
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
 }
 
+/* Review Form Container */
 .review-form-container {
     width: 80%;
     margin: 0 auto;
@@ -1086,7 +1248,7 @@ footer p {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
@@ -1097,10 +1259,11 @@ label {
 
 input, textarea, select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    color: #333;
 }
 
 textarea {
@@ -1108,6 +1271,7 @@ textarea {
     height: 150px;
 }
 
+/* Submit Button */
 .submit-btn {
     background-color: #ff4d5a;
     color: white;
@@ -1116,6 +1280,7 @@ textarea {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
@@ -1128,6 +1293,7 @@ textarea {
     background-color: #ffffff;
     padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .review-cards {
@@ -1141,12 +1307,20 @@ textarea {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Review Header */
 .review-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .review-header h3 {
@@ -1160,6 +1334,7 @@ textarea {
     color: #ff4d5a;
 }
 
+/* Review Card Text */
 .review-card p {
     font-size: 16px;
     color: #666;
